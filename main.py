@@ -1,3 +1,5 @@
+import warnings
+warnings.filterwarnings("ignore")
 import re
 import sys
 # Importamos las funciones de lógica de negocio desde nuestro paquete de funciones
