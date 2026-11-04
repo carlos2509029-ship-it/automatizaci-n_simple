@@ -12,9 +12,10 @@ def sanitizar(name):
     """
     # Lista de prefijos que queremos omitir para aislar el nombre real (ej. "precio de apple" -> "apple")
     prefixes = [
-        'la ', 'el ', 'de ', 'acción ', 'accion ', 'una ', 'un ', 
+        'la ', 'el ', 'de ', 'acción ', 'accion ', 'una ', 'un ',
         'precio de ', 'precio ', 'stock de ', 'stock ',
-        'valor de ', 'valor ', 'cual es ', 'cuál es '
+        'valor de ', 'valor ', 'cual es ', 'cuál es ',
+        'temperatura ', 'clima ', 'tiempo ', 'actual ', 'en ', 'del '
     ]
     
     # Convertir a minúsculas y quitar espacios en los extremos

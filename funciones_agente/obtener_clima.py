@@ -1,5 +1,6 @@
 # Módulo encargado de la integración con servicios meteorológicos externos
 import requests
+from utils.sanitizar import sanitizar
 
 def obtener_clima(driver, user_input):
     """
@@ -13,8 +14,8 @@ def obtener_clima(driver, user_input):
         Una cadena con la temperatura o un mensaje de error.
     """
     # Intentamos extraer el nombre de la ciudad eliminando palabras clave comunes
-    # Esto ayuda si se le pasa el input completo sin procesar previamente
-    city = user_input.lower().replace("clima", "").replace("temperatura", "").replace("en", "").replace("de", "").strip()
+    # Ayuda si se le pasa el input completo sin procesar previamente
+    city = sanitizar(user_input)
     
     try:
         # Realizamos una petición GET al servicio wttr.in
